@@ -1,0 +1,257 @@
+.header{
+    position: relative;
+    &__principal{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-bottom: 3px solid #b388eb;
+        .promocion{
+            background: rgb(223,205,246);
+            background: linear-gradient(90deg, rgba(223,205,246,1) 0%, rgba(201,171,241,1) 50%, rgba(179,136,235,1) 100%); 
+            text-align: center;
+            font-size: 15px;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 10px 0;
+        }
+        .nav{
+            background-color: #fff;
+            height: 4.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: 'Amatic SC', cursive;
+            .navButton{
+                width: 50px;
+                height: 50px;
+                border: none;
+                background: none;
+                .buttonIcon{
+                    color: rgba(179,136,235,1);
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+            .navLogo{
+                font-size: 40px;
+                font-weight: 700;
+                .logoLink{
+                    text-decoration: none;
+                    color: rgba(179,136,235,1);
+                    font-weight: 700;
+                }
+            }
+    
+        }
+    }
+
+    &__filtros{
+        margin-top: 120px;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .filtrosBuscador{
+            padding: 20px 0px 10px 0px;
+            .search{
+                width: 90vw;
+                padding: 11px 12px 11px 11px;
+                border-radius: 5px;
+                border: solid black 1px;
+                outline: none;
+                box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.541);
+            }
+        }
+        .filtrosFiltrar{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0px 20px 0px;  
+            .filtrarNombre{
+                background-color:#fff;
+                width: 90vw;
+                padding: 11px 12px 11px 11px;
+                border-radius: 5px;
+                border: solid black 1px;
+                box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.541);
+            }
+        }
+    }
+    .carrito{
+        display: none;
+        font-family: 'Josefin Sans', sans-serif;
+        background: rgb(223,205,246);
+            background: linear-gradient(90deg, rgba(223,205,246,1) 0%, rgba(201,171,241,1) 50%, rgba(179,136,235,1) 100%); 
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        h2{
+           text-align: center; 
+           padding: 20px 0 10px 0;
+           font-size: 25px;
+           margin: 0;
+           
+        }
+        .datos{
+            display: grid;
+            grid-template-columns: 170px 1fr 1fr;
+            grid-template-areas: "nombre tomo precio";
+            margin: 20px 0;
+            p{
+                font-size: 17px;
+                margin: 0;
+                padding: 0;
+            }
+            .columnaNombre{
+                margin-left: 7px;
+            }
+            .columnaTomo{
+                text-align: center;
+            }
+            .columnaPrecio{
+                margin-right: 7px;
+                text-align: end;
+            }
+        }
+        ol{
+            max-height: 300px;
+            overflow-y: scroll;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+
+            .productoItem{
+                background-color: #6f3db1;
+                color: #fff;
+                display: grid;
+                grid-template-columns: 170px 1fr 1fr;
+                grid-template-areas: "nombre tomo cantidad precio";
+                padding: 15px 0 13px 0;
+                .nombre{
+                    grid-area: nombre;
+                    margin-left: 7px;
+                }
+                .tomo{
+                    text-align: center;
+                    grid-area: tomo;
+                }
+                .cantidad{
+                    text-align: center;
+                    grid-area: cantidad;
+                }
+                .precio{
+                    grid-area: precio;
+                    text-align: end;
+                    margin-right: 7px;
+                }
+
+            }
+            .productoItem:hover{
+                background-color: #b586f3;
+            }
+        }
+        #totalDelCarro{
+            text-align: end;
+            font-size: 22px;
+            margin: 0;
+            margin-right: 20px;
+            padding: 10px 0;
+        }
+        .botonesDelCarrito{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .botonDelCarrito{
+                padding: 12px 10px 9px 10px;
+                background-color: #fff;
+                text-align: center;
+                background-color: #6f3db1;
+                border: 0;
+                color: #fff;
+                font-size: 16px;
+                margin: 15px 0;
+            }
+        }
+    }
+
+    .carrito--displayBlock{
+        display: block;
+    }
+}
+
+@media only screen and (min-width:992px){
+
+    .header{
+        &__promocion{
+            background: rgb(223,205,246);
+            background: linear-gradient(90deg, rgba(223,205,246,1) 0%, rgba(201,171,241,1) 50%, rgba(179,136,235,1) 100%); 
+            text-align: center;
+            font-size: 15px;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 10px 0;
+        }
+        &__nav{
+            height: 4.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: 'Amatic SC', cursive;
+            .navButton{
+                width: 50px;
+                height: 50px;
+                border: none;
+                background: none;
+                .buttonIcon{
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+            .navLogo{
+                font-size: 40px;
+                font-weight: 700;
+                .logoLink{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+    
+        }
+        &__filtros{
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            .filtrosBuscador{
+                padding: 20px 0px 10px 0px;
+                .search{
+                    width: 40vw;
+                    padding: 11px 12px 11px 11px;
+                    border-radius: 5px;
+                    border: solid black 1px;
+                    outline: none;
+                    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.541);
+                }
+            }
+            .filtrosFiltrar{
+                display: flex;
+                flex-direction: column;
+                padding: 10px 0px 20px 0px;  
+                .filtrarNombre{
+                    background-color:#fff;
+                    width: 40vw;
+                    padding: 11px 12px 11px 11px;
+                    border-radius: 5px;
+                    border: solid black 1px;
+                    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.541);
+                }
+            }
+        }
+    }
+
+}

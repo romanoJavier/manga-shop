@@ -1,0 +1,144 @@
+.tienda{
+    background-color: #dfcdf6;
+    &__presentacion{
+        color: #fff;
+        font-family: 'Amatic SC', cursive;
+        background: rgb(223,205,246);
+        background: linear-gradient(90deg, rgba(223,205,246,1) 0%, rgba(179,136,235,1) 50%, rgba(223,205,246,1) 100%); 
+        .presentacionTitulo{
+            text-align: center;
+            padding: 15px 0;
+            font-weight: 700;
+            font-size: 30px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .presentacionTitulo::before{
+            content: "";
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width:0px ;
+            height:0px ;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+            border-top: solid 20px #b388eb;
+        }
+    }
+    &__catalogo{
+        padding: 40px 0 40px 0;
+        .row{
+            --bs-gutter-x: 0;
+            .col{
+                .catalogoProducto{
+                    border-radius: 4px;
+                    display: flex;
+                    width: 200px;
+                    margin:15px 0;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #fff;
+                    .productoTitulo{
+                        font-family: 'Amatic SC', cursive;
+                        font-size: 25px;
+                        padding: 5px 0;
+                        margin: 0;
+                        font-weight: 700;
+                    }
+                    .productoPortada{
+                        display: flex;
+                        align-items: center ;
+                        justify-content: center;
+                        img{
+                            width: 80%;
+                        }
+                    }
+                    .productoInfo{
+                        h4{
+                            padding: 5px 0;
+                            margin: 0;
+                            font-size: 20px;
+                            font-family: 'Josefin Sans', sans-serif;;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 18px;
+                        }
+                    }
+                    .productoComprar{
+                        .comprarAgregar{
+                            text-align: center;
+                            background-color: #b388eb;
+                            border: 0;
+                            color: #fff;
+                            font-size: 16px;
+                            margin: 10px 0;
+                            padding: 10px 10px 13px 10px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+/* .carta{
+    border: 1px solid black;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.541) ;
+    display: flex;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+}
+
+.carta .tituloManga{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.carta .autor{
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;;
+}
+
+.carta .compra{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.carta .compra .precio{
+    font-size: 20px;
+}
+
+.carta .compra .agregar{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+} */
